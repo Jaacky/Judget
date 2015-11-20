@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title= Judget
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/jquery-2.1.4.min.js')
+		script(src='/javascripts/bootstrap.min.js')
+
+	body
+		nav.navbar.navbar-fixed-top(role="navigation")
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href="/") Judget
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-left
+						li
+					ul.nav.navbar-nav.navbar-right
+						li.user-nav
+							a(href="/profile") Cool
+						li.user-nav
+							a(href='/logout') Logout
+	block content
