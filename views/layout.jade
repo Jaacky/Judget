@@ -4,7 +4,7 @@ html
 		title= Judget
 		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
-		script(src='/jquery-2.1.4.min.js')
+		script(src='/javascripts/jquery-2.1.4.min.js')
 		script(src='/javascripts/bootstrap.min.js')
 
 	body
@@ -14,7 +14,10 @@ html
 					a.navbar-brand(href="/") Judget
 				.collapse.navbar-collapse
 					ul.nav.navbar-nav.navbar-left
-						li
+						li.user-nav
+							a(href="/purchase") Purchase
+						li.user-nav
+							a(href="/log") Log
 					ul.nav.navbar-nav.navbar-right
 						li.user-nav
 							a(href="/profile") Cool

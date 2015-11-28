@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	.container-fluid.content
+		form(action='/login' method='post')
+			input(placeholder='Username')
+			input(placeholder='Password')
+			button Login
