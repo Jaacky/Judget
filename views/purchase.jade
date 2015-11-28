@@ -1,0 +1,43 @@
+extends layout
+
+block content
+	script(src='/javascripts/purchase.js')
+
+	.container-fluid.content
+		h1 Log your purchases!
+		h2 #{message}
+		.row
+			.col-md-4.col-md-offset-4
+				form#judgetForm(action='/purchase' method='post')
+					.row
+						.col-md-12.input.input-bottom-border
+							.col-md-4
+								label Purchase
+							.col-md-8
+								input(type="text" name="name" placeholder='Name')
+					.row
+						.col-md-12.input.input-bottom-border
+							.col-md-4
+								label Price
+							.col-md-8
+								input(type="number" name="price" placeholder='Amount')
+					.row
+						.col-md-12
+							.row
+								h3 be honest.
+								.col-md-12.options-group
+									label.btn.btn-success
+										input(type="checkbox" name="optionUseful" class="options" id="optionUseful")
+										| Useful
+									label.btn.btn-danger
+										input(type="checkbox" name="optionExtra" class="options" id="optionExtra")
+										| Extra
+							.row
+								h3 not sure yet?
+								.col-md-12.options-group
+									label.btn.btn-info
+										input(type="checkbox" name="optionInvestment" class="options" id="optionInvestment")
+										| Investment
+					.row
+						.col-md-12
+							button.btn.btn-success Log it
