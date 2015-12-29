@@ -106,3 +106,7 @@ input:focus, input:active {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
+
+.logTable {
+	width: 100%;
+}

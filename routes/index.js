@@ -24,11 +24,12 @@ router.post('/purchase', function(req, res, next) {
 	else {
 		option = 'useful';
 	}
+	console.log(option);
 
 	var newPurchase = new Purchase({
 		name : req.body.name,
 		price : req.body.price,
-		option : req.body.option
+		option : option
 	});
 
 	newPurchase.save(function(err, data) {
