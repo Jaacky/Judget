@@ -41,11 +41,11 @@ router.post('/purchase', function(req, res, next) {
 	});
 });
 
-router.get('/log', function(req, res, next) {
-	Purchase.find({}, function(err, purchases) {
-		console.log(purchases);
-		res.render('log', { purchases: JSON.stringify(purchases) }); 
-	});
-});
+// router.get('/log', function(req, res, next) {
+// 	Purchase.find({}, function(err, purchases) {
+// 		console.log(purchases);
+// 		res.render('log', { purchases: JSON.stringify(purchases) }); 
+// 	});
+// });
 
 module.exports = router;
