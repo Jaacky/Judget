@@ -18,13 +18,18 @@ function parsePurchases(purchases) {
 function formatPurchaseRow(purchase, investmentFlag) {
 	var name = purchase.name;
 	var price = purchase.price;
+	var date = purchase.timestamp;
 	var option = purchase.option;
 	var decision = "";
 	if (investmentFlag) {
 		decision = "<td><button class='btn btn-default'>Useful</button><button class='btn btn-default'>Extra</button></td>"; 
 	}
 
-	return "<tr class='userRow " + option + "'>" + decision + "<td>" + name + "</td><td>" + price + "</td></tr>";
+	return "<tr class='userRow " + option + "'><td>" +
+				date + "</td>" + 
+				"<td>" + name + "</td><td>" + 
+				price + "</td>" + 
+				decision + "</tr>";
 }
 
 function addToTable(id, rows, investmentFlag) {

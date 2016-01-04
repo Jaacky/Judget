@@ -10,4 +10,10 @@ router.get('/', function(req, res, next) {
 	});
 });
 
+router.get('/investments', function(req, res, next) {
+	Purchase.find({'option' : 'investment'}, function(err, purchases) {
+		res.render('investments', { purchases: JSON.stringify(purchases) });
+	});
+});
+
 module.exports = router;
