@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	script(src="/javascripts/logs.js")
+
+	.container-fluid.content
+		h1 Investments
+		a(href='/logs') Logs
+		.row
+			.col-sm-12
+				table.table-striped.table-hover.table-bordered.logTable#investmentPurchases
+					colgroup
+						col(width='10%')
+						col(width='30%')
+						col(width='30%')
+						col(width='30%')
+					tr.no-hover
+						th Date
+						th Purchase
+						th Price
+						th Decision
+						
+	script(type='text/javascript').
+		purchases = !{purchases}
+		parsed = parsePurchases(purchases)
+		addToTable('investmentPurchases', parsed.investment, true)
